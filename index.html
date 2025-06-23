@@ -94,4 +94,36 @@
     <!-- Attrition Dashboard -->
     <div id="attrition" class="dashboard-frame active">
       <iframe title="HR_dashboard_Final_2.O_NewUpdates"
-        src="https://app.powerbi.com/view?r=eyJrIjoiMjRlNjUwZjEtYmZmOC00YzBkLTg3OTYtM2VhZjQzYjVkZDNiIiwidCI6ImQ0M2UzM2YwLTRmMWEtNGJhZC05Mjg4LTJlZTdkY2ExY
+        src="https://app.powerbi.com/view?r=eyJrIjoiMjRlNjUwZjEtYmZmOC00YzBkLTg3OTYtM2VhZjQzYjVkZDNiIiwidCI6ImQ0M2UzM2YwLTRmMWEtNGJhZC05Mjg4LTJlZTdkY2ExYmJiOCIsImMiOjh9"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Recruitment Dashboard -->
+    <div id="recruitment" class="dashboard-frame">
+      <iframe title="HR Rec Dashboard- ProtoFinal"
+        src="https://app.powerbi.com/view?r=eyJrIjoiYzRlNTAyYzUtZDNkYS00MjcxLTgxOTctODJiNzdmYmMyOWNjIiwidCI6ImQ0M2UzM2YwLTRmMWEtNGJhZC05Mjg4LTJlZTdkY2ExYmJiOCIsImMiOjh9"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 HR Analytics | Prototype View for Stakeholder Review
+  </footer>
+
+  <script>
+    function showDashboard(id) {
+      const dashboards = document.querySelectorAll('.dashboard-frame');
+      const buttons = document.querySelectorAll('.tab-button');
+
+      dashboards.forEach((frame) => frame.classList.remove('active'));
+      buttons.forEach((btn) => btn.classList.remove('active'));
+
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
