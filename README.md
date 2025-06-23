@@ -15,6 +15,7 @@ Each dashboard is embedded from Power BI and viewable directly in the browser.
 
 ### Option 1: View Online (GitHub Pages)
 If this has been deployed to GitHub Pages, you can view the dashboard live using the provided GitHub Pages link.
+https://muthu-ishwarya7.github.io/Sample_Prototype/
 
 ### Option 2: Run Locally
 
