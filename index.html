@@ -30,6 +30,7 @@
       justify-content: center;
       margin-top: 30px;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .tab-button {
@@ -88,6 +89,7 @@
   <div class="tabs">
     <button class="tab-button active" onclick="showDashboard(event, 'attrition')">Attrition & Retention</button>
     <button class="tab-button" onclick="showDashboard(event, 'recruitment')">Recruitment Tracker</button>
+    <button class="tab-button" onclick="showDashboard(event, 'sales')">Global Sales</button>
   </div>
 
   <div class="dashboard-container">
@@ -106,10 +108,18 @@
         allowfullscreen>
       </iframe>
     </div>
+
+    <!-- Global Sales Dashboard -->
+    <div id="sales" class="dashboard-frame">
+      <iframe title="GLOBAL SALES DASHBOARD - ENABL"
+        src="https://app.powerbi.com/reportEmbed?reportId=1e4731c7-d606-4684-a54c-026afaf242bb&autoAuth=true&ctid=d43e33f0-4f1a-4bad-9288-2ee7dca1bbb8"
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 
   <footer>
-    © 2025 HR Analytics | Prototype View for Stakeholder Review
+    © 2025 Dashboard Analytics | Prototype View for Stakeholder Review
   </footer>
 
   <script>
