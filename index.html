@@ -3,68 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Sample Page</title>
+  <title>Dashboard Prototype</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f3f4f6;
       margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background-color: #4a90e2;
-      color: white;
-      padding: 20px 0;
-    }
-    section {
-      padding: 40px 20px;
-    }
-    h1 {
-      font-size: 2.5rem;
-    }
-    p {
-      font-size: 1.2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
       color: #333;
     }
-    iframe {
-      border: none;
-      width: 90%;
-      height: 600px;
-      max-width: 1000px;
-      margin-top: 20px;
-    }
-    footer {
-      background-color: #333;
+
+    header {
+      background-color: #0a66c2;
       color: white;
-      padding: 15px 0;
-      position: fixed;
-      bottom: 0;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 20px;
+    }
+
+    .tab-button {
+      background-color: #e0e7ff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab-button.active,
+    .tab-button:hover {
+      background-color: #0a66c2;
+      color: white;
+    }
+
+    .dashboard-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .dashboard-frame {
+      display: none;
+    }
+
+    .dashboard-frame.active {
+      display: block;
+    }
+
+    iframe {
       width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Welcome to My Sample Webpage</h1>
+    <h1>Dashboard Prototype</h1>
   </header>
 
-  <section>
-    <p>This is a simple HTML page styled with internal CSS.</p>
-    <p>You can host this page using GitHub Pages!</p>
+  <div class="tabs">
+    <button class="tab-button active" onclick="showDashboard('attrition')">Attrition & Retention</button>
+    <button class="tab-button" onclick="showDashboard('recruitment')">Recruitment Tracker</button>
+  </div>
 
-    <!-- Power BI Embedded Report -->
-    <iframe title="GLOBAL SALES DASHBOARD - ENABL" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=1e4731c7-d606-4684-a54c-026afaf242bb&autoAuth=true&ctid=d43e33f0-4f1a-4bad-9288-2ee7dca1bbb8" frameborder="0" allowFullScreen="true"></iframe>
-
-    <iframe title="HR_dashboard_Final_2.O_NewUpdates" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMjRlNjUwZjEtYmZmOC00YzBkLTg3OTYtM2VhZjQzYjVkZDNiIiwidCI6ImQ0M2UzM2YwLTRmMWEtNGJhZC05Mjg4LTJlZTdkY2ExYmJiOCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-
-    <iframe title="HR Rec Dashboard- ProtoFinal" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYzRlNTAyYzUtZDNkYS00MjcxLTgxOTctODJiNzdmYmMyOWNjIiwidCI6ImQ0M2UzM2YwLTRmMWEtNGJhZC05Mjg4LTJlZTdkY2ExYmJiOCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-  </section>
-
-  <footer>
-    <p>© 2025 Your Name</p>
-  </footer>
-
-</body>
-</html>
+  <div class="dashboard-container">
+    <!-- Attrition Dashboard -->
+    <div id="attrition" class="dashboard-frame active">
+      <iframe title="HR_dashboard_Final_2.O_NewUpdates"
+        src="https://app.powerbi.com/view?r=eyJrIjoiMjRlNjUwZjEtYmZmOC00YzBkLTg3OTYtM2VhZjQzYjVkZDNiIiwidCI6ImQ0M2UzM2YwLTRmMWEtNGJhZC05Mjg4LTJlZTdkY2ExY
